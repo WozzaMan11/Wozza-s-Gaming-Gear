@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wozza's Gaming Gear</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        header, footer {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .content {
+            background-color: #444;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .item {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        nav a {
+            margin: 0 15px;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 24px;
+            margin: 10px 0 0;
+        }
+        .cta {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .cta:hover {
+            background-color: #e6b800;
+        }
+        .info {
+            background-color: #555;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .info p {
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body onload="showSection('home')">
+    <header>
+        <h1>Wozza's Gaming Gear</h1>
+        <nav>
+            <a href="#home" onclick="showSection('home')">Home</a>
+            <a href="#buy" onclick="showSection('buy')">Buy Gaming Gear</a>
+            <a href="#sell" onclick="showSection('sell')">Sell Your Gear</a>
+            <a href="#about" onclick="showSection('about')">About Us</a>
+        </nav>
+    </header>
+    <section id="home" class="active content">
+        <div class="hero">
+            <h2>Welcome to Wozza's Gaming Gear</h2>
+            <p>Your one-stop shop for all things gaming</p>
+            <a href="#buy" class="cta" onclick="showSection('buy')">Start Shopping</a>
+        </div>
+        <p>Welcome to Wozza's Gaming Gear, your one-stop shop for all things gaming. Whether you’re looking to buy the latest gaming equipment or sell your old gear, we’ve got you covered.</p>
+        <div class="info">
+            <h3>About Our Services</h3>
+            <p>At Wozza's Gaming Gear, we pride ourselves on offering a diverse range of gaming products from leading brands in the industry. Our platform ensures that you have access to the best gaming equipment at competitive prices. Whether you are a casual gamer or a professional, we have something for everyone.</p>
+            <p>We also provide a hassle-free selling process for those looking to upgrade or get rid of their old gear. Join our community of gamers today and experience the best in gaming shopping and selling.</p>
+        </div>
+    </section>
+    <section id="buy" class="content">
+        <h2>Buy Gaming Gear</h2>
+        <div class="item">
+            <h3><a href="https://www.playstation.com/en-gb/">PlayStation Official Site</a></h3>
+            <p>Explore the latest PlayStation consoles and accessories. The PlayStation brand has been a leader in the gaming industry, offering cutting-edge technology and an immersive gaming experience. <a href="https://www.playstation.com/en-gb/">Shop now</a>.</p>
+            <div class="info">
+                <p>PlayStation has consistently delivered high-quality gaming consoles that cater to a wide range of gamers. From the original PlayStation to the latest PlayStation 5, each generation has brought innovative features and a vast library of exclusive games. With PlayStation, you can expect top-notch graphics, seamless performance, and a vibrant gaming community.</p>
+            </div>
+        </div>
+        <div class="item">
+            <h3><a href="https://www.xbox.com/en-GB">Xbox Official Site</a></h3>
+            <p>Discover the newest Xbox consoles and gaming accessories. Xbox is known for its powerful consoles and exclusive game titles, providing an unparalleled gaming experience. <a href="https://www.xbox.com/en-GB">Shop now</a>.</p>
+            <div class="info">
+                <p>Xbox offers a range of consoles designed to deliver superior gaming performance. The Xbox Series X and Series S provide cutting-edge technology, including faster load times, enhanced graphics, and compatibility with thousands of games. Xbox's Game Pass subscription service gives you access to a massive library of games, ensuring endless entertainment options.</p>
+            </div>
+        </div>
+        <div class="item">
+            <h3><a href="https://www.cyberpowersystem.co.uk/">CyberPowerPC UK</a></h3>
+            <p>Custom-built gaming PCs with high-performance components. CyberPowerPC offers a wide range of customizable options to fit every gamer’s needs. <a href="https://www.cyberpowersystem.co.uk/">Shop now</a>.</p>
+            <div class="info">
+                <p>CyberPowerPC is a trusted name in the gaming industry, known for its high-performance gaming PCs. Each system is built with top-of-the-line components, ensuring that you get the best performance for your gaming needs. Whether you are into competitive gaming, streaming, or immersive single-player experiences, CyberPowerPC has the perfect setup for you.</p>
+            </div>
+        </div>
+        <div class="item">
+            <h3><a href="https://www.samsung.com/uk/monitors/">Samsung Monitors</a></h3>
+            <p>High-quality gaming monitors with stunning visuals and fast refresh rates. Samsung monitors are designed to deliver a smooth and immersive gaming experience. <a href="https://www.samsung.com/uk/monitors/">Shop now</a>.</p>
+            <div class="info">
+                <p>Samsung is a leading brand in the display technology industry, offering a range of monitors that cater to gamers. Samsung gaming monitors are known for their high resolution, fast refresh rates, and vibrant colors. With features like curved screens and ultra-wide displays, Samsung monitors provide an immersive gaming experience that will elevate your gameplay.</p>
+            </div>
+        </div>
+    </section>
+    <section id="sell" class="content">
+        <h2>Sell Your Gear</h2>
+        <div class="item">
+            <h3><a href="https://www.cex.co.uk">CeX - Sell Your Console</a></h3>
+            <p>Looking to upgrade? Sell your old console and get the best price with CeX. CeX offers competitive prices and a hassle-free selling process. <a href="https://www.cex.co.uk">Sell now</a>.</p>
+            <div class="info">
+                <p>CeX is a well-known name in the used electronics market. With a straightforward selling process, CeX ensures that you get the best value for your old gaming consoles and accessories. They offer cash payments or store credit, giving you the flexibility to choose how you want to be compensated. CeX also has a large network of stores, making it convenient to sell your gear.</p>
+            </div>
+        </div>
+        <div class="item">
+            <h3><a href="https://www.ebay.co.uk">eBay - Sell Accessories</a></h3>
+            <p>Have extra gaming accessories? List them on eBay and find buyers quickly. eBay provides a large marketplace with millions of potential buyers. <a href="https://www.ebay.co.uk">Start selling</a>.</p>
+            <div class="info">
+                <p>eBay is one of the largest online marketplaces in the world. With millions of active users, eBay provides a vast audience for your gaming accessories. The platform offers various selling options, including auctions and fixed-price listings, giving you control over how you want to sell your items. eBay's user-friendly interface
